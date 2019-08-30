@@ -1,0 +1,4 @@
+Premain-Class: ClassDumpAgent
+Agent-Class: ClassDumpAgent
+Can-Redefine-Classes: true
+Can-Retransform-Classes: true

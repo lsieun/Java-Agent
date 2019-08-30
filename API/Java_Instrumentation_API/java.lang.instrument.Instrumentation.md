@@ -66,6 +66,8 @@ void redefineClasses(ClassDefinition... definitions)
 void retransformClasses(Class<?>... classes)
 ```
 
+### isModifiableClass
+
 - `boolean isModifiableClass(Class<?> theClass)`
 
 Determines whether a class is modifiable by `retransformation` or `redefinition`. If a class is modifiable then this method returns `true`. If a class is not modifiable then this method returns `false`.
@@ -73,6 +75,8 @@ Determines whether a class is modifiable by `retransformation` or `redefinition`
 For a class to be retransformed, `isRetransformClassesSupported()` must also be `true`. But the value of `isRetransformClassesSupported()` does not influence the value returned by this function. For a class to be redefined, `isRedefineClassesSupported()` must also be `true`. But the value of `isRedefineClassesSupported()` does not influence the value returned by this function.
 
 **Primitive classes** (for example, `java.lang.Integer.TYPE`) and **array classes** are never modifiable.
+
+### redefineClasses
 
 - `void redefineClasses(ClassDefinition... definitions)`
 
@@ -93,6 +97,8 @@ The redefinition may change method bodies, the constant pool and attributes. The
 If this method throws an exception, no classes have been redefined.
 
 Parameters: `definitions` - array of classes to redefine with corresponding definitions; **a zero-length array** is allowed, in this case, this method does nothing
+
+### retransformClasses
 
 - `void retransformClasses(Class<?>... classes)`
 
