@@ -8,7 +8,7 @@
     - [2.2. 被调用的三种情况（从外部决定）](#22-被调用的三种情况从外部决定)
     - [2.3. 多个transformer的调用顺序（从外部决定）](#23-多个transformer的调用顺序从外部决定)
 - [3. 内部处理](#3-内部处理)
-    - [3.1. 对于classfileBuffer的理解（从外部决定）](#31-对于classfilebuffer的理解从外部决定)
+    - [3.1. 对于classfileBuffer的理解](#31-对于classfilebuffer的理解)
     - [3.2. 返回值](#32-返回值)
     - [3.3. 返回值的合法性校验](#33-返回值的合法性校验)
     - [3.4. 抛出异常情况的处理](#34-抛出异常情况的处理)
@@ -90,7 +90,7 @@ The input (via the `classfileBuffer` parameter) to the first transformer is:
 
 ### 3.2. 返回值
 
-If the implementing method determines that no transformations are needed, it should return `null`. Otherwise, it should create a **new `byte[]` array**, copy the input `classfileBuffer` into it, along with all desired transformations, and return the new array. The input `classfileBuffer` must not be modified.
+If the implementing method determines that **no transformations are needed, it should return `null`**. Otherwise, it should create a **new `byte[]` array**, copy the input `classfileBuffer` into it, along with all desired transformations, and return the new array. The input `classfileBuffer` must not be modified.
 
 ### 3.3. 返回值的合法性校验
 
